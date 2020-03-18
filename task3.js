@@ -10,16 +10,23 @@ class Storage {
     }
 
     addItem(item){
-        let flag = false;
-        for (const selItem of this.items){
-            if (item === selItem){
-                flag = true;
-                break;
-            }
-        }
-        if (!flag){
-            this.items.push(item);
-        }
+        // let flag = false;
+        // for (const selItem of this.items){
+        //     if (item === selItem){
+        //         flag = true;
+        //         break;
+        //     }
+        // }
+        // if (!flag){
+        //     this.items.push(item);
+        // }
+        
+        this.items.includes(item) ? true: this.items.push(item);
+        
+
+        // if (!this.items.includes(item)) {
+        //     this.items.push(item);
+        // }
     }
 
     removeItem(item){
